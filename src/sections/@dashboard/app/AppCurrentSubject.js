@@ -60,7 +60,7 @@ export default function AppCurrentSubject({ title, subheader, chartData, chartCo
       <CardHeader title={title} subheader={subheader} />
 
       <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="radar" series={chartData} options={chartOptions} height={340} />
+        <ReactApexChart type="radar" series={chartData} options={chartOptions} height={280} />
       </StyledChartWrapper>
     </Card>
   );

@@ -1,3 +1,11 @@
+// recoil
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  suseRecoilState,
+  useRecoilvalue,
+} from 'recoil';
 // routes
 import Router from './routes';
 // theme
@@ -11,9 +19,11 @@ import { StyledChart } from './components/chart';
 export default function App() {
   return (
     <ThemeProvider>
+      <RecoilRoot>
       <ScrollToTop />
       <StyledChart />
       <Router />
+      </RecoilRoot>
     </ThemeProvider>
   );
 }

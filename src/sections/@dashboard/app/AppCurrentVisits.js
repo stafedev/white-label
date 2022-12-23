@@ -61,7 +61,7 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
       },
     },
     plotOptions: {
-      pie: { donut: { labels: { show: false } } },
+      pie: { donut: { labels: { show: true } } },
     },
   });
 
@@ -70,7 +70,7 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
       <CardHeader title={title} subheader={subheader} />
 
       <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="pie" series={chartSeries} options={chartOptions} height={280} />
+        <ReactApexChart type="donut" series={chartSeries} options={chartOptions} height={280} />
       </StyledChartWrapper>
     </Card>
   );
