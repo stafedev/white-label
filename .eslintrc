@@ -24,6 +24,13 @@
       "impliedStrict": true
     }
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "no-new": 0,
     "no-alert": 0,
