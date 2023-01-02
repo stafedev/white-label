@@ -17,8 +17,8 @@ const navConfig = {padrao:[
     icon: icon('ic_user'),
   },
   {
-    title: 'Transferencias',
-    path: '/dashboard/products',
+    title: 'Vendas',
+    path: '/dashboard/vendas',
     icon: icon('ic_cart'),
   },
   {
@@ -36,6 +36,11 @@ const navConfig = {padrao:[
     path: '/404',
     icon: icon('ic_disabled'),
   },
+  {
+    title: 'Teste',
+    path: '/dashboard/test',
+    icon: icon('ic_disable'),
+  }
 ],
 master:[
   {

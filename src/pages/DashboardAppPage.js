@@ -12,8 +12,11 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  Card,
 } from '@mui/material';
 // components
+import UltimasVendas from '../components/ultimas-vendas/UltimasVendas';
+import MaiorNumeroVendas from '../components/maior-numero-vendas/MaiorNumeroVendas'
 import Iconify from '../components/iconify';
 // sections
 import {
@@ -27,6 +30,7 @@ import {
   AppCurrentSubject,
   AppConversionRates,
 } from '../sections/@dashboard/app';
+
 
 // ----------------------------------------------------------------------
 
@@ -126,7 +130,6 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-
           {/* 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
@@ -147,19 +150,37 @@ export default function DashboardAppPage() {
           }
 
           <Grid item xs={12} md={6} lg={4}>
-            <Typography>Últimas Vendas</Typography>
-            <TableContainer sx={{minWidth: 500}}>
-              <Table/>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>
-                      okS
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-            </TableContainer>
+            <Card>
+              <Typography variant="h6" sx={2}>ÚLTIMAS VENDAS</Typography>
+              <TableContainer sx={{minWidth: 400}}>
+                <Table>
+                  <UltimasVendas/>
+                </Table>
+              </TableContainer>
+            </Card>
           </Grid>
 
+          <Grid item xs={12} md={6} lg={4}>
+            <Card>
+              <Typography variant="h6" sx={2}>EMPRESA COM MAIOR NUMERO DE VENDAS</Typography>
+              <TableContainer sx={{minWidth: 200}}>
+                <Table>
+                  <MaiorNumeroVendas/>
+                </Table>
+              </TableContainer>
+            </Card>
+          </Grid>
+
+          <Grid  item xs={12} md={6} lg={4}>
+            <Card>
+              <Typography variant="h6" sx={2}>MAIOR VOLUME DE VENDAS POR BANDEIRA</Typography>
+                <TableContainer sx={{minWidth: 200}}>
+                  <Table>
+                    <MaiorNumeroVendas/>
+                  </Table>
+                </TableContainer>
+            </Card>
+          </Grid>
 
 
         </Grid>

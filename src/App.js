@@ -1,10 +1,6 @@
 // recoil
 import {
   RecoilRoot,
-  atom,
-  selector,
-  suseRecoilState,
-  useRecoilvalue,
 } from 'recoil';
 // routes
 import Router from './routes';
