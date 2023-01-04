@@ -1,66 +1,61 @@
 import {Tyṕography, Grid, Box, Button, Typography} from '@mui/material'
 import {BsCreditCard2Front} from 'react-icons/bs'
-import Shower from '../shower/Shower'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-const mockUp = {
-    valorVenda: 10,
-    valorLiquido: 8,
-}
-
-
-export default function DetalheVenda (mockUp){
+export default function DetalheVenda (props){
 
     return (
-        <Box p={2} width='650px' textAlign='center' role='presentation'>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12} md={12} lg={12} >
-                            <Typography variant='h4'>Detalhe da Venda</Typography>    
+        <Box p={6} width='650px' textAlign='center' role='presentation'>
+            <Grid container spacing={4} >
+                <Grid item xs={12} md={12} lg={12}>
+                    <Typography variant='h4' sx={{color:'gray'}}>Detalhe da Venda</Typography>    
+                </Grid>
+                <Grid item xs={12} md={12} lg={6}>
+                    <Typography variant='body1' sx={{color:'gray'}} textAlign='center'>Valor da Venda</Typography>
+                    <Typography>{props.valorVenda}</Typography>    
+                </Grid>
+                <Grid item xs={12} md={12} lg={6}>
+                    <Typography variant='body1' sx={{color:'gray'}}>Valor Liquído</Typography>
+                    <Typography>{props.valorLiquido}</Typography>
+                </Grid>
+                <Grid item xs={12} md={12} lg={6}>
+                    <Typography variant='body1' sx={{color:'gray'}}>Taxa da Venda</Typography>
+                    <Typography>{props.taxaVenda}</Typography>
+                </Grid>
+                <Grid item xs={12} md={12} lg={6}>
+                    <Typography variant='body1' sx={{color:'gray'}}>Taxa de Antecipação</Typography>
+                    <Typography>{props.taxaAntecipacao}</Typography>
+                </Grid>
+                <Grid item xs={12} md={12} lg={6}>
+                    <Typography variant='body1' sx={{color:'gray'}}>Tipo de Venda</Typography>
+                    <Typography>{props.tipo}</Typography>
+                </Grid>
+                <Grid item xs={12} md={12} lg={6}>
+                    {props.tipo==='Débito'?<BsCreditCard2Front size={40}/>:<FontAwesomeIcon style={{color:'red'}} icon="fa-brands fa-pix" />}
+                </Grid>
+                <Grid item xs={12} md={12} lg={12}>
+                    <Typography variant='body1'align={'center'} sx={{color:'gray'}}>ID da Transação</Typography>
+                </Grid>
+            <Grid container alingItems={'center'} item xs={12} md={12} lg={12}>                
+                <Button variant='outlined' sx={{flex:'1 0 0%'}} size='medium'>Estorno Venda</Button>  
+            </Grid>
+                
+                <Grid container item xs={12} md={12} lg={12} >
+                    <Grid container alignItems={'center'} item xs={12} md={12} lg={12} >
+                        <Grid item xs={'auto'}>
+                            <Typography>Dados da Venda</Typography>
                         </Grid>
-                        <Grid item xs={12} md={12} lg={6}>
-                            <Typography variant='h6' sx={{color:'gray'}}>Valor da Venda</Typography>
-                            <Typography>{mockUp.valorVenda}</Typography>    
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={6}>
-                            <Typography variant='h6' sx={{color:'gray'}}>Valor Liquído</Typography>
-                            <Typography>{mockUp.valorLiquido}</Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={6}>
-                            <Typography variant='h6' sx={{color:'gray'}}>Taxa da Venda</Typography>
-                            <Typography>{mockUp.taxaVenda}</Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={6}>
-                            <Typography variant='h6' sx={{color:'gray'}}>Taxa de Antecipação</Typography>
-                            <Typography>{mockUp.taxaAntecipacao}</Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={6}>
-                            <Typography variant='h6' sx={{color:'gray'}}>Tipo de Venda</Typography>
-                            <Typography>{mockUp.tipo}</Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={6}>
-                            <BsCreditCard2Front size={40}/>
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={12}>
-                            ID da Transação
-                        </Grid>
-                    <Grid container alingItems={'center'} item xs={12} md={12} lg={12}>
-                        
-                        <Button variant='outlined' sx={{flex:'1 0 0%'}} size='medium'>Estorno Venda</Button>
-                        
+                        <Grid item sx={{flex: '1 0 0%', border: '1px solid gray',}}/> 
                     </Grid>
-                    
-                    <Grid container item xs={12} md={12} lg={12} >
-                        <Grid container alignItems={'center'} item xs={12} md={12} lg={12} >
-                            <Grid item xs={'auto'}>Dados da Venda</Grid>
-                            <Grid item sx={{flex: '1 0 0%', border: '1px solid gray',}}/> 
+                    <Grid container alignItems={'center'} item xs={12} md={12} lg={12} >
+                        <Grid item xs={'auto'}>
+                            <Typography>Dados do Vendedor</Typography>
                         </Grid>
-                        <Grid container alignItems={'center'} item xs={12} md={12} lg={12} >
-                            <Grid item xs={'auto'}>Dados do Vendedor</Grid>
-                            <Grid item sx={{ flex: '1 0 0%', border: '1px solid gray', }} />
-                        </Grid>
+                        <Grid item sx={{ flex: '1 0 0%', border: '1px solid gray' }} />
                     </Grid>
-                    </Grid>
-                </Box>
+                </Grid>
+            </Grid>
+        </Box>
     )
 
 }
