@@ -1,14 +1,15 @@
-import {Tyṕography, Grid, Box, Button, Typography} from '@mui/material'
+import {Grid, Box, Button, Typography} from '@mui/material'
 import {BsCreditCard2Front} from 'react-icons/bs'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Shower from './Shower'
-
+import InfoVenda from './InfoVenda'
+import InfoVendedor from './InfoVendedor'
 
 export default function DetalheVenda (props){
 
     return (
-        <Box p={6} width='650px' textAlign='center' role='presentation'>
-            <Grid container spacing={4} >
+        <Box p={6} width='650px' role='presentation'>
+            <Grid container item spacing={4} >
                 <Grid item xs={12} md={12} lg={12}>
                     <Typography variant='h4' sx={{color:'gray'}}>Detalhe da Venda</Typography>    
                 </Grid>
@@ -24,22 +25,14 @@ export default function DetalheVenda (props){
                 <Grid item xs={12} md={12} lg={12}>
                     <Typography variant='body1'align={'center'} sx={{color:'gray'}}>ID da Transação</Typography>
                 </Grid>
-            <Grid container alingItems={'center'} item xs={12} md={12} lg={12}>                
+            <Grid container item alignItems={'center'} xs={12} md={12} lg={12}>                
                 <Button variant='outlined' sx={{flex:'1 0 0%'}} size='medium'>Estorno Venda</Button>  
             </Grid>
                 
                 <Grid container item xs={12} md={12} lg={12} >
                     <Grid container alignItems={'center'} item xs={12} md={12} lg={12} >
-                        <Grid item xs={'auto'}>
-                            <Typography>Dados da Venda</Typography>
-                        </Grid>
-                        <Grid item sx={{flex: '1 0 0%', border: '1px solid gray',}}/> 
-                    </Grid>
-                    <Grid container alignItems={'center'} item xs={12} md={12} lg={12} >
-                        <Grid item xs={'auto'}>
-                            <Typography>Dados do Vendedor</Typography>
-                        </Grid>
-                        <Grid item sx={{ flex: '1 0 0%', border: '1px solid gray' }} />
+                        <InfoVenda/> 
+                        <InfoVendedor/>
                     </Grid>
                 </Grid>
             </Grid>
