@@ -1,6 +1,8 @@
 import {Tyṕography, Grid, Box, Button, Typography} from '@mui/material'
 import {BsCreditCard2Front} from 'react-icons/bs'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Shower from './Shower'
+
 
 export default function DetalheVenda (props){
 
@@ -10,26 +12,12 @@ export default function DetalheVenda (props){
                 <Grid item xs={12} md={12} lg={12}>
                     <Typography variant='h4' sx={{color:'gray'}}>Detalhe da Venda</Typography>    
                 </Grid>
-                <Grid item xs={12} md={12} lg={6}>
-                    <Typography variant='body1' sx={{color:'gray'}} textAlign='center'>Valor da Venda</Typography>
-                    <Typography>{props.valorVenda}</Typography>    
-                </Grid>
-                <Grid item xs={12} md={12} lg={6}>
-                    <Typography variant='body1' sx={{color:'gray'}}>Valor Liquído</Typography>
-                    <Typography>{props.valorLiquido}</Typography>
-                </Grid>
-                <Grid item xs={12} md={12} lg={6}>
-                    <Typography variant='body1' sx={{color:'gray'}}>Taxa da Venda</Typography>
-                    <Typography>{props.taxaVenda}</Typography>
-                </Grid>
-                <Grid item xs={12} md={12} lg={6}>
-                    <Typography variant='body1' sx={{color:'gray'}}>Taxa de Antecipação</Typography>
-                    <Typography>{props.taxaAntecipacao}</Typography>
-                </Grid>
-                <Grid item xs={12} md={12} lg={6}>
-                    <Typography variant='body1' sx={{color:'gray'}}>Tipo de Venda</Typography>
-                    <Typography>{props.tipo}</Typography>
-                </Grid>
+                <Shower titulo={'Valor Venda'} valor={props.valorVenda}/>
+                <Shower titulo={'Valor Liquído'} valor={props.valorLiquido}/>
+                <Shower titulo={'Taxa da Venda'} valor={props.taxaVenda}/>
+                <Shower titulo={'Taxa de Antecipação'} valor={props.taxaAntecipacao}/>
+                <Shower titulo={'Tipo Venda'} valor={props.tipo}/>
+
                 <Grid item xs={12} md={12} lg={6}>
                     {props.tipo==='Débito'?<BsCreditCard2Front size={40}/>:<FontAwesomeIcon style={{color:'red'}} icon="fa-brands fa-pix" />}
                 </Grid>
