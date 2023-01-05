@@ -48,9 +48,11 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/lab": "^5.0.0-alpha.103",
     "@mui/material": "^5.10.9",
+    "@mui/x-date-pickers": "^5.0.13",
     "apexcharts": "^3.36.0",
     "change-case": "^4.1.2",
     "date-fns": "^2.29.3",
+    "dayjs": "^1.11.7",
     "history": "^5.3.0",
     "lodash": "^4.17.21",
     "numeral": "^2.0.6",
@@ -65,6 +67,7 @@
     "react-scripts": "^5.0.1",
     "recoil": "^0.7.6",
     "simplebar-react": "^2.4.3",
+    "styled-components": "^5.3.6",
     "web-vitals": "^3.0.3"
   },
   "devDependencies": {

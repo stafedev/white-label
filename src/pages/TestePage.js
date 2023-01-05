@@ -1,6 +1,8 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
+
 import { textState } from '../atoms'
+import Filter from '../components/filter/Filter'
 
 export default function TestePage () {
 
@@ -13,6 +15,8 @@ export default function TestePage () {
         <div>
             <input type="text" value={text} onChange={onChange}/>
             <p>Texto: {text}</p>
+
+            <Filter/>
         </div>
     )
 }
