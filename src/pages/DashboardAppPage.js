@@ -48,9 +48,9 @@ export default function DashboardAppPage() {
           DASHBOARD
         </Typography>
 
-        <Divider/>
+        <Divider variant='middle'/>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={3} m={1}>
         
         <Grid item xs={12} md={6} lg={3}>
             <AppConversionRates
@@ -67,7 +67,7 @@ export default function DashboardAppPage() {
             />
           </Grid>
         
-        <Grid item xs={12} md={6} lg={3}>
+        <Grid item xs={12} md={6} lg={3} >
             <AppWebsiteVisits
               title="Progressao Geral de Vendas"
               subheader="???"

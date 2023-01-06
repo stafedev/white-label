@@ -28,6 +28,7 @@ const Main = styled('div')(({ theme }) => ({
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
   },
+  backgroundColor: theme.palette.common.white
 }));
 
 // ----------------------------------------------------------------------

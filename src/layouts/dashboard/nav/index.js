@@ -27,6 +27,11 @@ const StyledAccount = styled('div')(({ theme }) => ({
   backgroundColor: alpha(theme.palette.grey[500], 0.12),
 }));
 
+const StyledCategory = styled(Typography)(({ theme }) => ({
+  fontWeight: 'bold' ,
+  color: theme.palette.grey[500],
+}));
+
 // ----------------------------------------------------------------------
 
 Nav.propTypes = {
@@ -75,14 +80,14 @@ export default function Nav({ openNav, onCloseNav }) {
         </Link>
       </Box>
 
-      <Typography>
-        Ações Disponíveis
-      </Typography>
+      <StyledCategory ml={2}>
+        ACÕES DISPONÍVEIS
+      </StyledCategory>
       <NavSection data={navConfig.padrao} />
 
-      <Typography>
-        Ações Master
-      </Typography>
+      <StyledCategory ml={2}>
+        AÇÕES MASTER
+      </StyledCategory>
       <NavSection data={navConfig.master}/>
 
     </Scrollbar>

@@ -34,13 +34,13 @@ export default function Filter(props){
     });
 
     return (
-        <Grid container item spacing={3} alignItems={'center'}>
+        <Grid container item spacing={3} mx={2} alignItems={'center'}>
             <Grid item>
                 <Typography>
                    {(() => { 
                         const hoje = new Date();
                         const mes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-                        return `Hoje, ${hoje.getDate()} de ${mes[hoje.getMonth()]} de ${hoje.getFullYear()}`;
+                        return <div><b>Hoje</b> {hoje.getDate()} de {mes[hoje.getMonth()]} de {hoje.getFullYear()}</div>;
                     })()}
                 </Typography>
             </Grid>
@@ -48,13 +48,13 @@ export default function Filter(props){
                 <ButtonStyled variant='contained'>Ontem</ButtonStyled>
             </Grid>
             <Grid item>
-                <Button variant='contained'>Semana</Button>
+                <ButtonStyled variant='contained'>Semana</ButtonStyled>
             </Grid>
             <Grid item>
-                <Button variant='contained'>Mês</Button>
+                <ButtonStyled variant='contained'>Mês</ButtonStyled>
             </Grid>
             <Grid item>
-                <Button variant='contained'>Ano</Button>
+                <ButtonStyled variant='contained'>Ano</ButtonStyled>
             </Grid>
             <Grid item>
                 <Typography>OU</Typography>
@@ -72,7 +72,6 @@ export default function Filter(props){
             </Grid>
             <Grid item>
             <LocalizationProvider dateAdapter={AdapterDayjs} locale={'pt-br'}>
-                
                     <DateTimePicker
                         renderInput={(props) => <TextField {...props} />}
                         label="Data Inicial"
